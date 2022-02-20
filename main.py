@@ -52,7 +52,7 @@ def draw():
     stdout.write(" |________\n")
     stdout.flush()
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet = frozenset("abcdefghijklmnopqrstuvwxyz")
 
 #while True
 eye_Mode = 0
@@ -136,7 +136,7 @@ while True:
         print(f'De letter {guess} zit er niet in.')
 
 
-    if fout > maxfouten - 1:
+    if fout >= maxfouten:
         break
 
 
